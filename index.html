@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">SALEM BEN AMOR</a>
+            <ul>
+                <li><a href="#a-propos">A propos</a></li>
+                <li><a href="#projets">Mes projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <h1>Portfolio</h1>
+            <p>Salem Ben Amor <br>
+            Développeur web en herbe</p>
+            <a href="#contact" class="bouton">Me contacter</a>
+        </div>
+    </header>
+    <main>
+        <section id="a-propos">
+            <h2>A propos de moi</h2>
+            <p>Passionné par l'informatique, je suis actuellement une formation de développeur web au sein du programme La toile, 
+                organisme d'EM Lyon. <br><br> Mon temps d'apprentissage en autodidacte ainsi que mes cours me permettent maintenant de programmer 
+                des sites webs de niveau débutant. <br><br> Curieux de nature et enthousiaste à l'idée de créer des pages webs à l'effigie d'un petit 
+                monde qui se développe, je vous invite à venir jeter un oeil régulièrement à mon portfolio qui se verra mis à jour et accueillera 
+                de nouveaux liens vers de neufs projets.</p>
+        </section>
+        <section id="projets">
+            <h2>Mes Projets</h2>
+            <div class="full-card">
+                <div class="card">
+                    <img src="Images/image_site1.png" alt="">
+                    <h4>Mon premier site</h4>
+                    <a href="https://salemnondisponible.github.io/Rendu_HTML/" class="bouton">Vers le site</a>
+                </div>
+                <div class="card">
+                    <img src="Images/image_site2.png" alt="">
+                    <h4>Un site vitrine lambda</h4>
+                    <a href="https://salemnondisponible.github.io/Rendu_HTML_CSS/" class="bouton">Vers le site</a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Me contacter</h2>
+            <form action="">
+                <div class="first-reunion">
+                    <div class="reunion">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom">
+                    </div>
+                    <div class="reunion">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                </div>
+                <div class="reunion">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="7" cols="50"></textarea>
+                </div>
+            </form>
+            <button>Envoyer</button>
+        </section>
+    </main>
+    <footer>
+        <p>© Salem Ben Amor | All right reserved</p>
+    </footer>
+</body>
+</html>
