@@ -8,68 +8,191 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">SALEM BEN AMOR</a>
-            <ul>
-                <li><a href="#a-propos">A propos</a></li>
-                <li><a href="#projets">Mes projets</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <nav id="navigation">
+            <ul class="liste_ancre">
+                <li><a class="ancre_nav" href="#profil">A propos</a></li>
+                <li><a class="ancre_nav" href="#competences">Mes compétences</a></li>
+                <li><a class="ancre_nav" href="#parcours">Mon parcours</a></li>
+                <li><a class="ancre_nav" href="#projets">Mes projets</a></li>
+                <li><a class="ancre_nav" href="#contacter">Me contacter</a></li>
             </ul>
         </nav>
-        <div>
+        <div class="presentation">
             <h1>Portfolio</h1>
-            <p>Salem Ben Amor <br>
-            Développeur web en herbe</p>
-            <a href="#contact" class="bouton">Me contacter</a>
+            <p>Je m'appelle <br><span class="important">Salem Ben Amor</span><br>et je suis <br><span class="important">Développeur web.</span></p>
         </div>
     </header>
+
     <main>
-        <section id="a-propos">
-            <h2>A propos de moi</h2>
-            <p>Passionné par l'informatique, je suis actuellement une formation de développeur web au sein du programme La toile, 
-                organisme d'EM Lyon. <br><br> Mon temps d'apprentissage en autodidacte ainsi que mes cours me permettent maintenant de programmer 
-                des sites webs de niveau débutant. <br><br> Curieux de nature et enthousiaste à l'idée de créer des pages webs à l'effigie d'un petit 
-                monde qui se développe, je vous invite à venir jeter un oeil régulièrement à mon portfolio qui se verra mis à jour et accueillera 
-                de nouveaux liens vers de neufs projets.</p>
-        </section>
-        <section id="projets">
-            <h2>Mes Projets</h2>
-            <div class="full-card">
-                <div class="card">
-                    <img src="Images/image_site1.png" alt="">
-                    <h4>Mon premier site</h4>
-                    <a href="https://salemnondisponible.github.io/Rendu_HTML/" class="bouton">Vers le site</a>
-                </div>
-                <div class="card">
-                    <img src="Images/image_site2.png" alt="">
-                    <h4>Un site vitrine lambda</h4>
-                    <a href="https://salemnondisponible.github.io/Rendu_HTML_CSS/" class="bouton">Vers le site</a>
+        <section id="profil">
+            <img src="Images/Itachi.jpg" alt="photo-de-profil">
+            <div>
+                <h2>A propos de moi</h2>
+                <p>Passionné par l'informatique, je suis actuellement une formation de développeur web au sein du programme La toile, organisme d'EM Lyon. Mon temps d'apprentissage en autodidacte ainsi que mes cours me permettent maintenant de programmer des sites webs de niveau débutant. Curieux de nature et enthousiaste à l'idée de créer des pages webs à l'effigie d'un petit monde qui se développe, je vous invite à venir jeter un oeil régulièrement à mon portfolio qui se verra mis à jour et accueillera de nouveaux liens vers de neufs projets.</p>
+                <div>
+                    <ul class="liste_ancre">
+                        <li><a href="#contacter" class="ancre_nav CTA">Me contacter</a></li>
+                        <li><a href="" class="ancre_nav CTA2">Mon CV</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <h2>Me contacter</h2>
-            <form action="">
-                <div class="first-reunion">
-                    <div class="reunion">
+
+        <section id="competences">
+            <h2>Mes compétences</h2>
+            <div>
+                <div class="fond_bloc">
+                    <h3>Développement Web</h3>
+                    <div class="container">
+                        <div class="card">
+                            <img src="Images/logo_HTML.png" alt="">
+                            <h4>HTML</h4>
+                            <p class="niveauT">Intermédiaire</p>
+                        </div>
+                        <div class="card">
+                            <img src="Images/logo_CSS.png" alt="">
+                            <h4>CSS</h4>
+                            <p class="niveauT">Intermédiaire</p>
+                        </div>
+                        <div class="card">
+                            <img src="Images/logo_JS.webp" alt="">
+                            <h4>Javascript</h4>
+                            <p class="niveauT">Intermédiaire</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fond_bloc">
+                    <h3>Web Design</h3>
+                    <div class="container">
+                        <div class="card">
+                            <img src="Images/logo_figma.png" alt="">
+                            <h4>Figma</h4>
+                            <p class="niveauT">Intermédiaire</p>
+                        </div>
+                        <div class="card">
+                            <img src="Images/logo_notion.webp" alt="">
+                            <h4>Notion</h4>
+                            <p class="niveauT">Intermédiaire</p>
+                        </div>
+                        <div class="card">
+                            <img src="Images/logo_canva.png" alt="">
+                            <h4>Canva</h4>
+                            <p class="niveauT">Intermédiaire</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fond_bloc">
+                    <h3>Bureautique</h3>
+                    <div class="container">
+                        <div class="card">
+                            <img src="Images/logo_word.png" alt="">
+                            <h4>Word</h4>
+                            <p class="niveauT">Intermédiaire</p>
+                        </div>
+                        <div class="card">
+                            <img src="Images/logo_excel.png" alt="">
+                            <h4>Excel</h4>
+                            <p class="niveauT">Intermédiaire</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="parcours">
+            <h2>Mon parcours</h2>
+            <div>
+                <div class="fond_bloc">
+                    <h3>Formations</h3>
+                    <div class="container">
+                        <div class="card">
+                            <h4>Nom de formation</h4>
+                            <p class="niveauT">Formation anglais</p>
+                        </div>
+                        <div class="card">
+                            <h4>La Toile EMLyon</h4>
+                            <p class="niveauT">Formation de Développement web</p>
+                        </div>
+                        <div class="card">
+                            <h4>Autodidacte</h4>
+                            <p class="niveauT">Apprentissage de l'informatique</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fond_bloc">
+                    <h3>Pro</h3>
+                    <div class="container">
+                        <div class="card">
+                            <h4>Boulangerie Blache</h4>
+                            <p class="niveauT">Vendeur / Caissier</p>
+                        </div>
+                        <div class="card">
+                            <h4>Sanofi Pasteur</h4>
+                            <p class="niveauT">Agent courrier</p>
+                        </div>
+                        <div class="card">
+                            <h4>Le Petit Casino</h4>
+                            <p class="niveauT">Vendeur / Caissier</p>
+                        </div>
+                        <div class="card">
+                            <h4>Les Jardins Gourmands</h4>
+                            <p class="niveauT">Animateur Bungy-Trampoline</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projets">
+            <h2>Mes projets</h2>
+            <div>
+                <div class="cardProjet">
+                    <img src="Images/image_site1.png" alt="">
+                    <h4>Mon premier site</h4>
+                    <a href="https://salemnondisponible.github.io/Rendu_HTML/">Vers le site -></a>
+                </div>
+                <div class="cardProjet">
+                    <img src="Images/image_site2.png" alt="">
+                    <h4>Mon deuxième site</h4>
+                    <a href="https://salemnondisponible.github.io/Rendu_HTML_CSS/">Vers le site -></a>
+                </div>
+                <div class="cardProjet">
+                    <img src="" alt="Ca arrive">
+                    <h4>En attente</h4>
+                    <a href="">Vers le site -></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacter">
+            <div class="formulaire">
+                <h2>Me contacter</h2>
+                <form action="">
+                    <div class="formContact">
                         <label for="nom">Nom</label>
-                        <input type="text" id="nom" name="nom">
+                        <input type="text" name="nom" id="nom" placeholder="Votre nom">
                     </div>
-                    <div class="reunion">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email">
+
+                    <div class="formContact">
+                        <label for="mail">Mail</label>
+                        <input type="text" name="mail" id="mail" placeholder="Votre mail">
                     </div>
-                </div>
-                <div class="reunion">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="7" cols="50"></textarea>
-                </div>
-            </form>
-            <button>Envoyer</button>
+
+                    <div class="formContact">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Votre message" cols="30" rows="5"></textarea>
+                    </div>
+
+                    <button id="envoyer" class="ancre_nav CTA">Envoyer</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
+        <img id="vague" src="Images/image_wave.png" alt="">
+        <h2>By Salem</h2>
         <p>© Salem Ben Amor | All right reserved</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
