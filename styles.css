@@ -68,17 +68,8 @@ header {
     text-align: center;
 }
 
-nav {
+#navigation {
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
-    width: 100%;
-}
-
-.scroll-nav {
-    background-color: var(--couleurSite);
-    box-shadow:  0 0 5px black;
 }
 
 .liste_ancre {
@@ -109,7 +100,7 @@ nav {
 }
 
 .presentation {
-    padding-top: 130px;
+    padding-top: 4em;
 }
 
 header h1 {
@@ -120,6 +111,41 @@ header h1 {
 .important {
     font-size: 1.5em;
     color: var(--couleurTexte)
+}
+
+#navigationSimple {
+    width: 30%;
+    position: fixed;
+    bottom: 10px;
+    left: 35%;
+    background-color: var(--couleurBouton);
+    border-radius: 20px;
+    padding: 5px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.navigationVisible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#navigationSimple .liste_ancre {
+    gap: 10px;
+}
+
+#navigationSimple .ancre_nav {
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    align-content: center;
+}
+
+#navigationSimple .ancre_nav:hover {
+    background-color: var(--couleurTexte);
 }
 
 
