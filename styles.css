@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --couleurSite: #2C2C2E;
-    --couleurBouton: #4527A0;
-    --couleurTexte: #CDB8FF;
-    --hoverBouton: #F0FFB5;
-    --blancCassé: #F8F8F8;
-    --fondProfil: #2C0047;
+    --color-body: #2C2C2E;
+    --background-color-bouton: #4527A0;
+    --color-p: #CDB8FF;
+    --blanc-cassé: #F8F8F8;
+    --background-color-card: #2C0047;
+
+    --font-weight-bouton: 500;
+    --font-size-bouton: 18px;
+    --font-weight-p: 400;
+    --font-size-p: 16px;
+
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -22,8 +28,8 @@ html {
 /* <---------- Police d'écriture ----------> */
 body {
     font-family: "Inter", sans-serif;
-    background-color: var(--couleurSite);
-    color: var(--couleurTexte);
+    background-color: var(--color-body);
+    color: var(--color-p);
 }
 
 h1 {
@@ -46,14 +52,14 @@ h4 {
 }
 
 button {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: var(--font-weight-bouton);
+    font-size: var(--font-size-bouton);
 }
 
 p {
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--blancCassé);
+    font-weight: var(--font-weight-p);
+    font-size: var(--font-size-p);
+    color: var(--blanc-cassé);
 }
 
 
@@ -61,32 +67,29 @@ p {
 
 header {
     height: 100vh;
-    background-image: url(Images/ordi_portfolio.jpg);
+    padding-top: 1rem;
+    background-image: url(Images/image_portfolio1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    text-align: center;
-}
-
-#navigation {
-    padding: 10px 0;
+    
 }
 
 .liste_ancre {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 3rem;
 }
 
 .ancre_nav {
     display: inline-block;
     text-decoration: none;
-    color: var(--couleurTexte);
-    background-color: var(--couleurBouton);
-    font-weight: 500;
-    font-size: 18px;
-    padding: 15px;
+    color: var(--color-p);
+    background-color: var(--background-color-bouton);
+    font-weight: var(--font-weight-bouton);
+    font-size: var(--font-size-bouton);
+    padding: 1rem;
     border-radius: 20px;
     border: 2px solid transparent;
     transition: background 0.3s;
@@ -94,23 +97,32 @@ header {
 }
 
 .ancre_nav:hover {
-    color: var(--couleurBouton);
-    background-color: var(--couleurTexte);
-    border: 2px solid var(--couleurBouton);
+    color: var(--background-color-bouton);
+    background-color: var(--color-p);
+    border: 2px solid var(--background-color-bouton);
 }
 
-.presentation {
-    padding-top: 4em;
+.presentation-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;  /*Ce bloc couvre ma barre nav et cela va servir à laisser passer les clics*/
 }
 
 header h1 {
     text-decoration: underline;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
 }
 
 .important {
     font-size: 1.5em;
-    color: var(--couleurTexte)
+    color: var(--color-p)
 }
 
 #navigationSimple {
@@ -118,7 +130,7 @@ header h1 {
     position: fixed;
     bottom: 10px;
     left: 35%;
-    background-color: var(--couleurBouton);
+    background-color: var(--background-color-bouton);
     border-radius: 20px;
     padding: 5px;
     transition: all 0.3s ease;
@@ -145,7 +157,7 @@ header h1 {
 }
 
 #navigationSimple .ancre_nav:hover {
-    background-color: var(--couleurTexte);
+    background-color: var(--color-p);
 }
 
 
@@ -157,7 +169,7 @@ header h1 {
     text-align: center;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 5rem;
 }
 
 #profil > div {
@@ -165,76 +177,72 @@ header h1 {
     width: 50%;
 }
 
-#profil > div > div {
-    margin-top: 30px;
+#profil p {
+    margin: 2rem 0;
 }
 
 #profil img {
-    padding: 76px 0;
+    padding: 4rem 0;
 }
 
-#profil div h2 {
-    margin-bottom: 30px;
-}
 
 .CTA {
-    background-color: var(--couleurTexte);
-    color: var(--couleurBouton);
+    color: var(--color-p);
+    background-color: var(--background-color-bouton);
     border: 2px solid transparent;
 }
 
 .CTA:hover {
-    color: var(--couleurTexte);
-    background-color: var(--couleurBouton);
-    border: 2px solid var(--couleurTexte);
+    background-color: var(--color-p);
+    color: var(--background-color-bouton);
+    border: 2px solid var(--background-color-bouton);
 }
 
 .CTA2 {
     background-color: transparent;
-    color: var(--couleurTexte);
-    border: 2px solid var(--couleurTexte);
+    color: var(--color-p);
+    border: 2px solid var(--color-p);
 }
 
 
 /* <---------- COMPETENCES / PARCOURS ----------> */
 
 #competences, #parcours, #projets, #contacter {
-    height: 100vh;
-    text-align: center;
-    padding: 10px 30px;
+    padding: 1rem 0 4rem 0;
 }
 
-#competences h2, #parcours h2, #projets h2 {
-    padding-bottom: 20px;
+#competences h2, #parcours h2, #projets h2, .formulaire h2 {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 #competences > div, #parcours > div, #projets > div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 0;
+    gap: 2rem;
 }
 
 .fond_bloc {
+    text-align: center;
     width: 40%;
-    background-color: var(--fondProfil);
-    padding: 20px;
+    background-color: var(--background-color-card);
+    padding: 1rem;
     border-radius: 20px;
 }
 
 .container {
-    margin-top: 20px;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
-    gap: 10px;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .container > .card {
-    padding: 10px 20px;
-    width: 20%;
-    border: 1px solid var(--couleurTexte);
+    width: 30%;
+    padding: 1rem;
+    border: 1px solid var(--color-p);
     border-radius: 10px;
 }
 
@@ -251,27 +259,20 @@ header h1 {
 /* <---------- PARCOURS ----------> */
 
 #parcours .card {
-    padding: 20px;
-    width: 38%;
-    height: 80px;
+    width: 45%;
+    height: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--fondProfil);
-    border: none;
-}
-
-#parcours .fond_bloc {
-    background-color: transparent;
-    padding: 0 20px;
 }
 
 
 /* <---------- PROJETS ----------> */
 
 .cardProjet {
+    text-align: center;
     width: 25%;
-    box-shadow: 0 0 10px var(--couleurTexte);
+    box-shadow: 0 0 10px var(--color-p);
     border-radius: 10px;
 }
 
@@ -279,39 +280,36 @@ header h1 {
     width: 100%;
     border-radius: 10px 10px 0 0;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .cardProjet h4 {
-    color: var(--blancCassé);
+    color: var(--blanc-cassé);
 }
 
 .cardProjet a {
     display: inline-block;
     text-decoration: none;
     font-size: 16px;
-    color: var(--couleurTexte);
-    margin: 10px 0;
+    color: var(--color-p);
+    margin: 0.5rem 0;
 }
 
 
 /* <---------- CONTACTER ----------> */
 
 .formulaire {
-    box-shadow: 0 0 10px var(--hoverBouton);
+    text-align: center;
+    box-shadow: 0 0 10px var(--color-p);
     width: 40%;
     margin: auto;
-    padding: 10px 0;
-}
-
-.formulaire h2 {
-    margin-bottom: 20px;
+    padding: 1rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1rem;
 }
 
 .formContact {
@@ -322,18 +320,18 @@ form {
     position: absolute;
     top: -0.6rem;
     left: 5rem;
-    background-color: var(--couleurSite);
+    background-color: var(--color-body);
     padding: 0 3px;
 }
 
 .formContact input, .formContact textarea {
-    width: 70%;
+    width: 80%;
     background-color: transparent;
-    border: 2px solid var(--couleurTexte);
-    padding: 20px;
+    border: 2px solid var(--color-p);
+    padding: 1.3rem;
     border-radius: 10px;
     font-size: 1rem;
-    color: var(--blancCassé);
+    color: var(--blanc-cassé);
     outline: none;
 }
 
@@ -344,7 +342,7 @@ textarea {
 .formulaire button {
     width: 30%;
     margin: auto;
-    padding: 10px;
+    padding: 1rem;
 }
 
 
@@ -357,11 +355,11 @@ footer {
 }
 
 footer p, footer h2 {
-    color: var(--couleurBouton);
-    padding: 20px 0;
+    color: var(--background-color-bouton);
+    padding: 1rem 0;
 }
 
 #vague {
     width: 100%;
-    background-color: var(--couleurSite);
+    background-color: var(--color-body);
 }
