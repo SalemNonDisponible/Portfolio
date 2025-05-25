@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --color-body: #2C2C2E;
-    --background-color-bouton: #4527A0;
-    --color-p: #CDB8FF;
-    --blanc-cassé: #F8F8F8;
-    --background-color-card: #2C0047;
+    --color-body: #0F1B2A;
+    --background-color-bouton: #144680;
+    --background-color-bouton-hover: #D0E8FF;
+    --blanc-cassé: #F5F9FC;
+    --background-color-card: #1E2A38;
 
     --font-weight-bouton: 500;
     --font-size-bouton: 18px;
@@ -29,7 +29,7 @@ html {
 body {
     font-family: "Inter", sans-serif;
     background-color: var(--color-body);
-    color: var(--color-p);
+    color: var(--background-color-bouton-hover);
 }
 
 h1 {
@@ -68,7 +68,7 @@ p {
 header {
     height: 100vh;
     padding-top: 1rem;
-    background-image: url(Images/image_portfolio1.jpg);
+    background-image: url(Images/image_portfolio2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -85,7 +85,7 @@ header {
 .ancre_nav {
     display: inline-block;
     text-decoration: none;
-    color: var(--color-p);
+    color: var(--background-color-bouton-hover);
     background-color: var(--background-color-bouton);
     font-weight: var(--font-weight-bouton);
     font-size: var(--font-size-bouton);
@@ -98,7 +98,7 @@ header {
 
 .ancre_nav:hover {
     color: var(--background-color-bouton);
-    background-color: var(--color-p);
+    background-color: var(--background-color-bouton-hover);
     border: 2px solid var(--background-color-bouton);
 }
 
@@ -122,17 +122,17 @@ header h1 {
 
 .important {
     font-size: 1.5em;
-    color: var(--color-p)
+    color: var(--background-color-bouton-hover)
 }
 
 #navigationSimple {
     width: 30%;
+    height: 10%;
     position: fixed;
     bottom: 10px;
     left: 35%;
     background-color: var(--background-color-bouton);
     border-radius: 20px;
-    padding: 5px;
     transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
@@ -145,19 +145,28 @@ header h1 {
 }
 
 #navigationSimple .liste_ancre {
-    gap: 10px;
+    height: 100%;
+    gap: 0;
+}
+
+#navigationSimple .liste_ancre li {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #navigationSimple .ancre_nav {
     background-color: transparent;
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-    align-content: center;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #navigationSimple .ancre_nav:hover {
-    background-color: var(--color-p);
+    background-color: var(--background-color-bouton-hover);
 }
 
 
@@ -187,21 +196,21 @@ header h1 {
 
 
 .CTA {
-    color: var(--color-p);
+    color: var(--background-color-bouton-hover);
     background-color: var(--background-color-bouton);
     border: 2px solid transparent;
 }
 
 .CTA:hover {
-    background-color: var(--color-p);
+    background-color: var(--background-color-bouton-hover);
     color: var(--background-color-bouton);
     border: 2px solid var(--background-color-bouton);
 }
 
 .CTA2 {
     background-color: transparent;
-    color: var(--color-p);
-    border: 2px solid var(--color-p);
+    color: var(--background-color-bouton-hover);
+    border: 2px solid var(--background-color-bouton-hover);
 }
 
 
@@ -242,7 +251,7 @@ header h1 {
 .container > .card {
     width: 30%;
     padding: 1rem;
-    border: 1px solid var(--color-p);
+    border: 1px solid var(--background-color-bouton-hover);
     border-radius: 10px;
 }
 
@@ -272,7 +281,7 @@ header h1 {
 .cardProjet {
     text-align: center;
     width: 25%;
-    box-shadow: 0 0 10px var(--color-p);
+    box-shadow: 0 0 10px var(--background-color-bouton-hover);
     border-radius: 10px;
 }
 
@@ -291,7 +300,7 @@ header h1 {
     display: inline-block;
     text-decoration: none;
     font-size: 16px;
-    color: var(--color-p);
+    color: var(--background-color-bouton-hover);
     margin: 0.5rem 0;
 }
 
@@ -300,7 +309,7 @@ header h1 {
 
 .formulaire {
     text-align: center;
-    box-shadow: 0 0 10px var(--color-p);
+    box-shadow: 0 0 10px var(--background-color-bouton-hover);
     width: 40%;
     margin: auto;
     padding: 1rem;
@@ -327,7 +336,7 @@ form {
 .formContact input, .formContact textarea {
     width: 80%;
     background-color: transparent;
-    border: 2px solid var(--color-p);
+    border: 2px solid var(--background-color-bouton-hover);
     padding: 1.3rem;
     border-radius: 10px;
     font-size: 1rem;
