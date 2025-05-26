@@ -372,3 +372,80 @@ footer p, footer h2 {
     width: 100%;
     background-color: var(--color-body);
 }
+
+
+
+/* <---------- MEDIA QUERIES ----------> */
+
+@media screen and (max-width: 430px) {
+
+/* <---------- HEADER ----------> */
+
+    #navigation {
+        display: none;
+    }
+
+    #navigationSimple {
+        width: 80%;
+        height: 7%;
+        left: 50%;
+        transform: translateX(-50%); /*Permet de re-décaler mon élément à -50% de ça propre largeur*/
+    }
+
+/* <---------- PROFIL ----------> */
+
+    #profil {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        height: auto;
+        padding: 2rem;
+    }
+
+    #profil img {
+        padding: 0;
+        width: 50%;
+    }
+
+    #profil div {
+        width: 100%;
+    }
+
+/* <---------- COMPETENCES / PARCOURS / PROJETS / CONTACTER----------> */
+
+    #competences, #parcours, #projets, #contacter {
+        padding: 2rem;
+    }
+
+    #competences > div, #parcours > div, #projets > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fond_bloc {
+        width: 100%;
+    }
+
+    .container > .card {
+        padding: 0.5rem;
+    }
+
+    #competences h4 {
+        margin: 10px 0;
+    }
+
+    .niveauT {
+        font-size: 12px;
+        margin-top: 0;
+    }
+
+    .cardProjet {
+        width: 100%;
+    }
+
+    .formulaire {
+        width: 100%;
+    }
+}
