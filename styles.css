@@ -269,10 +269,10 @@ header h1 {
 
 #parcours .card {
     width: 45%;
-    height: 7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+}
+
+#parcours .card h4 {
+    margin-bottom: 1rem;
 }
 
 
@@ -392,6 +392,7 @@ footer p, footer h2 {
         transform: translateX(-50%); /*Permet de re-décaler mon élément à -50% de ça propre largeur*/
     }
 
+
 /* <---------- PROFIL ----------> */
 
     #profil {
@@ -413,6 +414,7 @@ footer p, footer h2 {
         width: 100%;
     }
 
+
 /* <---------- COMPETENCES / PARCOURS / PROJETS / CONTACTER----------> */
 
     #competences, #parcours, #projets, #contacter {
@@ -429,7 +431,7 @@ footer p, footer h2 {
     }
 
     .container > .card {
-        padding: 0.5rem;
+        width: 45%;
     }
 
     #competences h4 {
@@ -447,5 +449,20 @@ footer p, footer h2 {
 
     .formulaire {
         width: 100%;
+    }
+
+    .formContact input, .formContact textarea {
+        width: 100%;
+    }
+
+    .formulaire button {
+        width: 40%;
+    }
+
+
+/* <---------- FOOTER  ----------> */
+
+    footer {
+        height: 30vh;
     }
 }
