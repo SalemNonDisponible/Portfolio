@@ -62,6 +62,10 @@ p {
     color: var(--blanc-cassé);
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* <---------- HEADER ----------> */
 
@@ -130,7 +134,8 @@ header h1 {
     height: 10%;
     position: fixed;
     bottom: 10px;
-    left: 35%;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: var(--background-color-bouton);
     border-radius: 20px;
     transition: all 0.3s ease;
@@ -191,7 +196,8 @@ header h1 {
 }
 
 #profil img {
-    padding: 4rem 0;
+    margin: 4rem 0;
+    border-radius: 10px;
 }
 
 
@@ -220,7 +226,7 @@ header h1 {
     padding: 1rem 0 4rem 0;
 }
 
-#competences h2, #parcours h2, #projets h2, .formulaire h2 {
+#competences h2, #parcours h2, #projets h2, .formulaire h2, #contacter h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -230,6 +236,10 @@ header h1 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+}
+
+#competences h4 {
+    margin: 0.5rem 0;
 }
 
 .fond_bloc {
@@ -253,15 +263,26 @@ header h1 {
     padding: 1rem;
     border: 1px solid var(--background-color-bouton-hover);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container img {
     width: 70%;
 }
 
+#parcours .niveauT {
+    margin-bottom: 1rem;
+}
+
 .niveauT {
-    margin-top: 5px;
     font-size: 14px;
+}
+
+.niveauD {
+    font-size: 12px;
 }
 
 
@@ -272,7 +293,7 @@ header h1 {
 }
 
 #parcours .card h4 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 
@@ -283,17 +304,33 @@ header h1 {
     width: 25%;
     box-shadow: 0 0 10px var(--background-color-bouton-hover);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardProjet div {
+    flex: 1;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cardProjet img {
     width: 100%;
+    height: 7rem;
     border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid var(--background-color-bouton-hover);
     object-fit: cover;
-    margin-bottom: 1rem;
 }
 
 .cardProjet h4 {
     color: var(--blanc-cassé);
+}
+
+.cardProjet p {
+    font-size: 14px;
+    padding: 1rem 0;
 }
 
 .cardProjet a {
@@ -301,7 +338,6 @@ header h1 {
     text-decoration: none;
     font-size: 16px;
     color: var(--background-color-bouton-hover);
-    margin: 0.5rem 0;
 }
 
 
@@ -309,16 +345,66 @@ header h1 {
 
 .formulaire {
     text-align: center;
-    box-shadow: 0 0 10px var(--background-color-bouton-hover);
-    width: 40%;
-    margin: auto;
-    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 form {
+    width: 40%;
+    background-color: var(--background-color-card);
+    border-radius: 10px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.moyenContact {
+    width: 40%;
+    background-color: var(--background-color-card);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.moyenContact a {
+    color: var(--background-color-bouton-hover);
+}
+
+.blocContact {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid var(--background-color-bouton-hover);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.contactScale {
+    transition: scale 0.3s;
+}
+
+.contactScale:hover {
+    scale: 1.02;
+}
+
+.lienEx {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lienEx a {
+    display: flex;
 }
 
 .formContact {
@@ -329,7 +415,7 @@ form {
     position: absolute;
     top: -0.6rem;
     left: 5rem;
-    background-color: var(--color-body);
+    background-color: var(--background-color-card);
     padding: 0 3px;
 }
 
@@ -354,12 +440,21 @@ textarea {
     padding: 1rem;
 }
 
+.formulaire a#envoyer {
+    width: 30%;
+    margin: auto;
+    padding: 1rem;
+    font-weight: var(--font-weight-bouton);
+    font-size: var(--font-size-bouton);
+}
+
 
 /* <---------- FOOTER ----------> */
 
 footer {
     background-color: #BFD7FF;
-    height: 80vh;
+    height: 50vh;
+    padding-top: 2rem;
     text-align: center;
 }
 
@@ -367,12 +462,6 @@ footer p, footer h2 {
     color: var(--background-color-bouton);
     padding: 1rem 0;
 }
-
-#vague {
-    width: 100%;
-    background-color: var(--color-body);
-}
-
 
 
 /* <---------- MEDIA QUERIES ----------> */
@@ -449,13 +538,33 @@ footer p, footer h2 {
 
     .formulaire {
         width: 100%;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 0;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .moyenContact {
+        width: 100%;
     }
 
     .formContact input, .formContact textarea {
         width: 100%;
     }
 
+    .formContact label {
+        left: 2rem;
+    }
+
     .formulaire button {
+        width: 40%;
+    
+    }
+
+    .formulaire a#envoyer {
         width: 40%;
     }
 
@@ -463,6 +572,7 @@ footer p, footer h2 {
 /* <---------- FOOTER  ----------> */
 
     footer {
-        height: 30vh;
+        height: 25vh;
+        padding: 0;
     }
 }

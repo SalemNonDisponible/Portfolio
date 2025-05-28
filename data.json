@@ -1,0 +1,34 @@
+{
+    "projets" : [
+        {
+            "nom": "Présentation générale",
+            "description": "Premier site créé en apprenant les bases du HTML et CSS.",
+            "imageUrl": "Images/image_site1.png",
+            "lien": "https://salemnondisponible.github.io/Rendu_HTML/"
+        },
+        {
+            "nom": "Lueur & Parfum",
+            "description": "Exercice pour créé un site à partir d'une maquette.",
+            "imageUrl": "Images/image_site2.png",
+            "lien": "https://salemnondisponible.github.io/Rendu_HTML_CSS/"
+        },
+        {
+            "nom": "Fonctionnalités JS",
+            "description": "Diverses fonctionnalités rassemblées sur une page tels qu'une calculatrice ou un Memory Card et bien d'autres encore.",
+            "imageUrl": "Images/image_fonctionnalite.webp",
+            "lien": "https://salemnondisponible.github.io/Fonctionnalites/"
+        },
+        {
+            "nom": "Palais du chocolat",
+            "description": "Site vitrine d'un vendeur fictif de délicieux chocolats.",
+            "imageUrl": "Images/image_chocolat.jpg",
+            "lien": "https://salemnondisponible.github.io/RenduJS_final/"
+        },
+        {
+            "nom": "Pong",
+            "description": "Mon premier jeu reproduit en JavaScript.",
+            "imageUrl": "Images/image_pong.png",
+            "lien": "https://salemnondisponible.github.io/Pong/"
+        }
+    ]
+}
